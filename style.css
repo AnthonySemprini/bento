@@ -28,6 +28,7 @@ h2{
     "hero hero hero hero aside2 aside2"
     "hero hero hero hero aside2 aside2"
     "hero hero hero hero aside2 aside2"
+    "hero hero hero hero aside2 aside2"
     "aside3 aside3 aside5 aside5 aside2 aside2"
     "aside3 aside3 aside5 aside5 aside4 aside4 ";
 }
@@ -49,6 +50,10 @@ h2{
   .grid .item:nth-child(2) {
     grid-area: aside2;
     background-color: #f5f0e1;
+    font-size:large;
+    font-weight: bold;
+    text-align: justify;
+    padding: 2%;
   }
   
   .grid .item:nth-child(3) {
