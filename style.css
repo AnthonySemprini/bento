@@ -6,21 +6,30 @@ body {
     margin: 0;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+h2{
+    text-align: center;
+}
+
 .grid {
     background: hsl(0, 0%, 100%);
     width: 95%;
     max-width: 1500px;
-    height: 1000px;
+    height: 98vh;
     display: grid;
     gap: 1.5vw;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
+    "title title title title title title"
     "hero hero hero hero aside2 aside2"
     "hero hero hero hero aside2 aside2"
     "hero hero hero hero aside2 aside2"
-    "aside3 aside3 aside4 aside4 aside2 aside2"
-    "aside3 aside3 aside4 aside4 aside5 aside5 ";
+    "aside3 aside3 aside5 aside5 aside2 aside2"
+    "aside3 aside3 aside5 aside5 aside4 aside4 ";
 }
 
 .item {
@@ -30,31 +39,67 @@ body {
   
   .grid .item:nth-child(1) {
     grid-area: hero;
-    background-color: blueviolet;
+    background-image: url("/img/IMG_3451\ 2.png");
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
   }
   .grid .item:nth-child(2) {
     grid-area: aside2;
-    background-color: aquamarine;
+    background-color: #f5f0e1;
   }
   
   .grid .item:nth-child(3) {
     grid-area: aside3;
-    background: yellow;
+    background: #f5f0e1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  div.icon{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
   }
   .grid .item:nth-child(4) {
     grid-area: aside4;
-    background-color: bisque;
+    background-color: #1e3d59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .grid .item:nth-child(5) {
-    grid-area: aside5;
-    background-color: red;
+      grid-area: aside5;
+      background-color: #f5f0e1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .grid .item:nth-child(5) a{
+        color: black;
+    }
+
+  .grid .item:nth-child(6) {
+    grid-area: title;
+    background-color: #f5f0e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media screen and (max-width: 1000px) {
     .grid {
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas:
+      "title title title title "
         "hero   hero   hero   hero"
         "hero   hero   hero   hero"
         "aside2 aside2 aside2 aside3"
@@ -66,11 +111,12 @@ body {
     .grid {
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas:
+      "title title title"
         "hero   hero   hero"
         "hero   hero   hero"
         "aside2 aside2 aside2"
-        "aside4 aside4 aside4"
         "aside3 aside3 aside5"
-        "aside3 aside3 aside5";
+        "aside3 aside3 aside5"
+        "aside4 aside4 aside4";
     }
   }
